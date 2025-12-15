@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: cadetblue;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px;
+}
+
+.box {
+  height: 100px;
+  border: 1px solid black;
+  font-size: 25px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* bu kisimda da artik 1001px uzeri tum sayfada bu uygulanir */
+
+@media (min-width: 1001px) {
+  .box {
+    flex: 0 0 calc(16.66% - 10px);
+    font-size: 4rem;
+  }
+
+  body{
+    background-color: rgb(40, 14, 65);
+    
+  }
+}
+
+/* 
+---bu bolumde max width uzerinden ilerlersek width degeri kucuk olan daha alt satirlarda yer alsin ki
+her bolumunku ayri bir sekilde etki etsin 
+---min width ile responsive yapilacaksa width degeri buyuk olan daha alt satirlarda bulunsun ki birden
+birden fazla min width degeri ayri kirilma noktalarinda etki etsin 
+---birde bir brack point'te bir ozellik (mesela color:blue) ozelligi tanimlanip baska bir brack point'te
+bu ozellik degistirilmezse o sabit kalir
+---ama digistirilirse override edilir.
+*/
+@media (max-width: 1000px) {
+  .box {
+    flex: 0 0 calc(16.66% - 10px);
+    font-size: 3rem;
+  }
+
+  body{
+    background-color: blueviolet;
+  }
+}
+
+@media (max-width: 900px){
+  .box {
+    flex: 0 0 calc(33.333% - 10px);
+    font-size: 2rem;
+  }
+  body{
+    background-color: darkcyan;
+  }
+}
+
+@media (max-width: 800px){
+  .box {
+    flex: 0 0 calc(50% - 10px);
+    font-size: 1.5rem;
+  }
+  body{
+    background-color: orchid;
+  }
+}
+@media (max-width: 600px) {
+  .box {
+    flex: 0 0 100%;
+    font-size: 1rem;
+  }
+  body{
+    background-color: sandybrown;
+  }
+}
+
+
+.blue{
+    background-color: blue;
+}
+.red{
+    background-color: red;
+}
+.yellow{
+    background-color: yellow;
+}
+.green{
+    background-color: green;
+}
+.purple{
+    background-color: purple;
+}
+.orange{
+    background-color: orange;
+}
+.blue{
+    background-color: blue;
+}
+
+
